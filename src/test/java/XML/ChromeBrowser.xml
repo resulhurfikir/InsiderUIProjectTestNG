@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ChromeSuite">
+    <listeners>
+        <listener class-name="Utilities.Listeners"/>
+    </listeners>
+
+    <test name="ChromeBrowser">
+
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="Tests.TestPage"></class>
+        </classes>
+
+    </test>
+</suite>

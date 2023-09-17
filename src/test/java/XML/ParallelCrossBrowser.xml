@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelTestingSuite" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="Utilities.Listeners"/>
+    </listeners>
+
+    <test name="ChromeBrowser">
+
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>          
+            <class name="Tests.TestPage"></class>
+        </classes>
+        
+    </test>
+
+    <test name="FirefoxBrowser">
+
+        <parameter name="browserType" value="firefox"></parameter>
+
+        <classes>
+            <class name="Tests.TestPage"></class>
+        </classes>
+
+    </test>
+
+
+
+</suite>
